@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'com.fiserv'
+version '10.02'
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    repositories {
+        maven {
+            name "GitHubPackages"
+            url "https://maven.pkg.github.com/PineapplePayments/fiserv-gmf-lib"
+            credentials {
+                username "$System.env.GITHUB_USERNAME"
+                password "$System.env.GITHUB_TOKEN"
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+//    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.0'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-jaxb-annotations
+//    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: '2.13.0'
+
+
+
+}
