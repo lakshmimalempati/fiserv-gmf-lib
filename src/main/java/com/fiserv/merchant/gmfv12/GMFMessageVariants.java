@@ -8,10 +8,7 @@
 
 package com.fiserv.merchant.gmfv12;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -65,8 +62,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+// Added manually
+@XmlRootElement(name = "GMF")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GMF", propOrder = {
+@XmlType(name = "GMFMessageVariants", namespace = "com/fiserv/Merchant/gmfV10.02", propOrder = {
     "creditRequest",
     "debitRequest",
     "pinlessDebitRequest",
