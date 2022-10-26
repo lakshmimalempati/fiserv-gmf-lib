@@ -106,7 +106,7 @@ public class CreditResponseDetails {
     @XmlElement(name = "MEXCardGrp")
     protected MEXCardGrp mexCardGrp;
     @XmlElement(name = "AddtlAmtGrp")
-    protected List<AddtlAmtGrp> addtlAmtGrp;
+    protected AddtlAmtGrp addtlAmtGrp;
     @XmlElement(name = "EMVGrp")
     protected EMVGrp emvGrp;
     @XmlElement(name = "TAGrp")
@@ -332,10 +332,10 @@ public class CreditResponseDetails {
      * 
      * 
      */
-    public List<AddtlAmtGrp> getAddtlAmtGrp() {
-        if (addtlAmtGrp == null) {
-            addtlAmtGrp = new ArrayList<AddtlAmtGrp>();
-        }
+    public AddtlAmtGrp getAddtlAmtGrp() {
+//        if (addtlAmtGrp == null) {
+//            addtlAmtGrp = new ArrayList<AddtlAmtGrp>();
+//        }
         return this.addtlAmtGrp;
     }
 

@@ -64,7 +64,7 @@ public class EBTResponseDetails {
     @XmlElement(name = "CardGrp")
     protected CardGrp cardGrp;
     @XmlElement(name = "AddtlAmtGrp")
-    protected List<AddtlAmtGrp> addtlAmtGrp;
+    protected AddtlAmtGrp addtlAmtGrp;
     @XmlElement(name = "TAGrp")
     protected TAGrp taGrp;
     @XmlElement(name = "EbtGrp")
@@ -150,10 +150,10 @@ public class EBTResponseDetails {
      * 
      * 
      */
-    public List<AddtlAmtGrp> getAddtlAmtGrp() {
-        if (addtlAmtGrp == null) {
-            addtlAmtGrp = new ArrayList<AddtlAmtGrp>();
-        }
+    public AddtlAmtGrp getAddtlAmtGrp() {
+//        if (addtlAmtGrp == null) {
+//            addtlAmtGrp = new ArrayList<AddtlAmtGrp>();
+//        }
         return this.addtlAmtGrp;
     }
 
